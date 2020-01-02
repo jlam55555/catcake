@@ -176,7 +176,7 @@ hr {
 /* nav-bar contents */
 .nav-bar>.nav-item {
   flex: 0 0 calc(100vh / 3);
-  height: calc(100vh / 3);
+  height: auto;
   position: relative;
 }
 .nav-bar>.nav-item>h1 {
@@ -222,6 +222,7 @@ hr {
   flex: 0 1 0;
   border: none;
   outline: none;
+  height: auto;
 }
 .search-bar .search-sort>label:hover,
 .search-bar .search-sort>label:active,
