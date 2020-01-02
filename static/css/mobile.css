@@ -176,6 +176,7 @@ hr {
 /* nav-bar contents */
 .nav-bar>.nav-item {
   flex: 0 0 calc(100vh / 3);
+  height: calc(100vh / 3);
   position: relative;
 }
 .nav-bar>.nav-item>h1 {
