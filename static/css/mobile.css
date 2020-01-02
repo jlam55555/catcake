@@ -1,0 +1,308 @@
+/* main css file and mobile/vertical orientation layouts */
+/* minimum supported size: iPhone 5 (320x568), in both orientations */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+
+  /* setting 1rem */
+  font-size: 16px;
+  font-family: lato, sans-serif;
+  min-width: 320px;
+  min-height: 320px;
+}
+
+html::before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+    
+  background-image: url(/res/bg_repeat2.png);
+  background-repeat: repeat;
+  background-size: auto;
+  background-size: 100px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+}
+a:not(.jumbotron):not(.no-underline) {
+  border-bottom: 5px solid yellow;
+}
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  line-height: 1.5;
+}
+hr {
+  width: 15rem;
+  margin: 1em 0;
+  height: 0.25rem;
+  background-color: black;
+  border: none;
+}
+
+.jumbotron {
+  display: block;
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.jumbotron-fit {
+  background-size: contain;
+}
+
+.nav-bar, .search-bar {
+  width: 300px;
+  height: 500px;
+  position: fixed;
+  /* makes the assumption that ss > 300x500 */
+  right: calc(3rem - 300px);
+  background-color: #444;
+  z-index: 1;
+  transition: right 0.2s, bottom 0.2s, top 0.2s;
+  overflow: hidden;
+  color: white;
+}
+.nav-bar {
+  bottom: calc(3rem - 500px);
+  border-top-left-radius: 1.5rem;
+}
+.search-bar {
+  top: calc(3rem - 500px);
+  border-bottom-left-radius: 1.5rem;
+}
+.nav-bar.open {
+  right: 0;
+  bottom: 0;
+}
+.search-bar.open {
+  right: 0;
+  top: 0;
+}
+.nav-close, .search-bar-close {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  width: 3rem;
+  height: 3rem;
+}
+.nav-close {
+  top: 0;
+}
+.search-bar-close {
+  bottom: 0;
+}
+.nav-item {
+  height: calc(500px / 3) !important;
+  position: relative;
+  color: white;
+}
+.nav-item:hover > .bgimg {
+  opacity: 0.5;
+}
+.nav-bar > .nav-close:active {
+  background-color: #888888;
+}
+.nav-bar>.nav-close>div::before, .search-bar>.search-bar-close>div::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.nav-bar>.nav-close>div::before {
+  content: '\2632'; /* trigram for fire */
+}
+.search-bar>.search-bar-close>div::before {
+  content: '\2315'; /* search icon */
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  top: -0.3rem;
+}
+.nav-bar.open>.nav-close>div::before,
+.search-bar.open>.search-bar-close>div::before {
+  content: '\2715'; /* unicode close/cross/times */
+
+  /* unset properties from search-bar (search icon is weird) */
+  font-size: 1em;
+  font-weight: normal;
+  position: static;
+}
+
+.container {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.bgfill {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.gallery-art {
+  height: 30vh;
+  width: 50%;
+}
+.bgimg {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bgimg-fit {
+  background-size: contain;
+}
+.bgtext {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bglight {
+  opacity: 30%;
+}
+.footer {
+  text-align: right;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  position: relative;
+  height: 100vh;
+}
+.ui-interact {
+  cursor: pointer;
+}
+
+.lander {
+  height: 100vh;
+  font-size: 2rem;
+}
+.lander .container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding: 0 1em;
+}
+.lander-img {
+  display: none;
+}
+.lander-text {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lander-text > hr {
+  display: none;
+}
+.lander-text-img {
+  width: 100%;
+  max-width: 15rem;
+  margin: 1rem 0;
+}
+
+.radio-hidden {
+  display: none;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+}
+.search-bar .container {
+  padding: 1rem;
+}
+.search-bar h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.search-bar input, .search-bar button, .search-sort .custom-radio {
+  outline: none;
+  border: none;
+  background-color: #eee;
+  color: #444;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 0.25rem;
+}
+.search-bar input {
+  width: 100%;
+}
+.search-bar input:hover, .search-bar button:hover,
+.search-bar input:focus, .search-bar button:active {
+  background-color: white;
+}
+.search-query-container, .search-tag-container, .search-sort-container {
+  flex: 1 0 0;
+}
+.search-query-container, .search-sort-container {
+  background-color: #ddd;
+  color: black;
+}
+.search-tag-container, .search-update-container {
+  background-color: #444;
+  color: white;
+}
+.search-update-container {
+  flex: 0 0 3rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.search-sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.search-sort .custom-radio p {
+  line-height: 1;
+}
+.search-sort .custom-radio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+}
+.search-sort .custom-radio:hover, .search-sort .custom-radio:active,
+.search-sort .radio-hidden:checked~.custom-radio {
+  background-color: white !important;
+}

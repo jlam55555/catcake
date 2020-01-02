@@ -1,0 +1,27 @@
+/* for square-ish aspect ratios (including ratio) */
+.jumbotron {
+  height: 100vh;
+}
+.jumbotron-fit {
+  height: 75vh;
+}
+
+.gallery-art {
+  height: 50vh;
+  width: 50%;
+}
+
+.nav-bar>.nav-close:active, .search-bar>.search-bar-close:active {
+  background-color: transparent;
+}
+.nav-bar>.nav-close>div:hover::before,
+.search-bar>.search-bar-close>div:hover::before {
+  background-color: #888888;
+}
+
+@media (min-width: 500px) {
+  .gallery-art {
+    height: 33vh;
+    width: calc(100% / 3);
+  }
+}

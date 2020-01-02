@@ -1,0 +1,200 @@
+{
+  "__comment": [
+    "The current image metadata schema is as follows:",
+    "{",
+    "  title:     artwork name (string, no restrictions)",
+    "  filename:  artwork filename (put in ./static/art)",
+    "  perma:     art url (optional string, user views art at /peruse/[perma]",
+    "             (if not given, will use modified filename by default)",
+    "  desc:      brief description of art (string, no restrictions)",
+    "  long_desc: longer descriptio of art (optional string)",
+    "  timestamp: datetime (string, some standard format (e.g., ISO8601))",
+    "             (see https://developer.mozilla.org/en-US/docs/Web/",
+    "             JavaScript/Reference/Global_Objects/Date/toISOString)",
+    "  tags:      (optional array of strings)",
+    "}",
+    "For more advanced stuff (e.g., user interaction with votes/comments)",
+    "will need database support. Not hard to implement, just different.",
+    "Re-run server.js every time this file is updated.",
+    "Notes:",
+    "- filename convention: separated_by_underscores.png",
+    "- permalink convention: separated-by-dashes (created by default from fn)",
+    "- tag convention: separated-by-dashes"
+  ],
+  "meta": [
+    {
+      "title": "Catman",
+      "filename": "cover.png",
+      "desc": "(No association with Batman. Or is there?)",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["humanoid"]
+    },
+    {
+      "title": "Dragon",
+      "filename": "dragon.jpg",
+      "desc": "Playing around with patterns.",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["fantasy"]
+    },
+    {
+      "title": "Earrings and Red Hair",
+      "filename": "earrings_red_hair.png",
+      "desc": "Blurb goes here.",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["humanoid"]
+    },
+    {
+      "title": "iPhone Case",
+      "filename": "iphone_case.png",
+      "desc": "WHALLLLLLE",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Jane (by mom)",
+      "filename": "jane_by_mom.png",
+      "desc": "Signature says Cynthia.",
+      "long_desc": "borderline /r/imsorryjon/",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["abstract"]
+    },
+    {
+      "title": "Piano Cat",
+      "filename": "piano_cat.png",
+      "desc": "One of my original detailed drawings.",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["realistic","animal"]
+    },
+    {
+      "title": "Angler Boatman",
+      "filename": "angler_boatman.png",
+      "desc": "An angler and a boatman",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Cat Boy",
+      "filename": "cat_boy.png",
+      "desc": "Like Cat Man. But a Boy.",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Space Koi",
+      "filename": "space_koi.png",
+      "desc": "Koi. In. Space.",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Sword Dragon",
+      "filename": "sword_dragon.png",
+      "desc": "This is a sword dragon.",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Dab Lookism",
+      "filename": "dab_lookism.png",
+      "desc": "You LOWLY middle schooler. Stop dabbing.",
+      "tool": "Autodesk Sketchbook for iOS",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["humanoid"]
+    },
+    {
+      "title": "Devil Sunlight Club",
+      "filename": "devil_sunlight_club.png",
+      "desc": "Bright as the fires from below",
+      "tool": "Autodesk Sketchbook for iOS",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Fridge Cats Midnight Snack",
+      "filename": "fridge_cats_midnight_snack.png",
+      "desc": "The great hunter stalks his prey.",
+      "tool": "Autodesk Sketchbook for iOS",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Glowing Red",
+      "filename": "glowing_red.png",
+      "desc": "Hi. fx.",
+      "tool": "Autodesk Sketchbook for iOS",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Koi Circle Red",
+      "filename": "koi_circle_red.png",
+      "desc": "Precursor to the other koi image.",
+      "tool": "Autodesk Sketchbook for iOS",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Laser Eyes Cat",
+      "filename": "laser_eyes_cat.png",
+      "desc": "To catch the laser, you must first become one with the laser.",
+      "tool": "Autodesk Sketchbook for iOS",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Llama Hand",
+      "filename": "llama_hand.png",
+      "desc": "Hand of a llama. Bird of a brain.",
+      "tool": "Autodesk Sketchbook for iOS",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Ohm Blue Hair Cake",
+      "filename": "caaake.png",
+      "desc": "yum ;) hair cake",
+      "tool": "Autodesk Sketchbook for iOS",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "oWo Cat Mask Hobo",
+      "filename": "owo_cat_mask_hobo.png",
+      "desc": "OwO oWo OWO owo Owo oWO OWo owO cat",
+      "tool": "Autodesk Sketchbook for iOS",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Paper Butterfly Sun",
+      "filename": "paper_butterfly_sun.png",
+      "desc": "Living origami would be cool. And dangerous.",
+      "tool": "Autodesk Sketchbook for iOS",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Purple Hair Nature Recording",
+      "filename": "purple_hair_nature_recording.png",
+      "desc": "What's with all of this colorful hair?",
+      "tool": "Autodesk Sketchbook for iOS",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Red Antlers",
+      "filename": "red_antlers.png",
+      "desc": "Rudolph the Red-Antlered Reindeer",
+      "tool": "Autodesk Sketchbook for iOS",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    },
+    {
+      "title": "Saiki Imitator Chinese Bakery Foods",
+      "filename": "saiki_imitator_chinese_bakery_foods.png",
+      "desc": "Anything Japanese is better.",
+      "timestamp": "2019-12-30T05:00:00.000Z",
+      "tags": ["animal"]
+    }
+  ]
+}

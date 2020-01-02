@@ -1,0 +1,65 @@
+/* for wider aspect ratios (including mobile) */
+.jumbotron {
+  height: 100vh;
+}
+.jumbotron-fit {
+  height: 75vh;
+}
+
+.nav-bar>.nav-close:active, .search-bar>.search-bar-close:active {
+  background-color: transparent;
+}
+.nav-bar>.nav-close>div:hover::before,
+.search-bar>.search-bar-close>div:hover::before {
+  background-color: #888;
+}
+
+.lander-img {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+}
+.lander-img > img {
+  max-width: calc(100% - 5rem);
+}
+.lander-text {
+  flex: 0 1 0;
+  align-items: flex-end;
+}
+.lander-text > hr {
+  display: block;
+}
+.lander-text-img {
+  display: none;
+}
+
+.gallery, .gallery * {
+  width: 100%;
+  /*transition: width 0.2s;*/
+}
+/*.gallery.search-bar-open {*/
+/*  width: calc(100% - 300px);*/
+/*}*/
+.gallery-art {
+  height: 75vh;
+}
+
+@media (min-width: 500px) {
+  .gallery-art {
+    height: 50vh;
+    width: calc(100% / 3);
+  }
+}
+@media (min-width: 1000px) {
+  .gallery-art {
+    height: 40vh;
+    width: 25%;
+  }
+}
+@media (min-width: 1600px) {
+  .gallery-art {
+    height: 25vh;
+    width: calc(100% / 6);
+  }
+}

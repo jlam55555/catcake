@@ -1,0 +1,44 @@
+doctype 5
+html(lang='en')
+  head
+    title Catcake | #{title}
+
+    // default -- mobile
+    link(rel='stylesheet' href='/css/mobile.css')
+
+    // desktop -- for large screens
+    // ...
+
+    // different aspect ratios
+    link(rel='stylesheet' media='screen and (min-aspect-ratio:3/4) and (max-aspect-ratio:4/3)' href='/css/squat.css')
+    link(rel='stylesheet' media='screen and (min-aspect-ratio:4/3)' href='/css/wide.css')
+
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400i,400,700&display=swap')
+
+    script(src='/js/main.js' defer)
+    meta(name='viewport' content='width=device-width,initial-scale=1.0')
+  body
+    nav.nav-bar
+      div.nav-close.ui-interact(title='Toggle menu')
+        div.bgtext
+      a.jumbotron.nav-item(href='/')
+        h1.bgtext Home
+        div.bgimg.bgfill.bglight(style=`background-image:url(/art/cover.png)`)
+      a.jumbotron.nav-item(href='/gallery')
+        h1.bgtext Gallery
+        div.bgimg.bgfill.bglight(style=`background-image:url(/art/piano_cat.png)`)
+      a.jumbotron.nav-item(href='/about')
+        h1.bgtext About
+        div.bgimg.bgfill.bglight(style=`background-image:url(/art/jane_by_mom.png)`)
+    block content
+    div.footer
+      div.container
+        p
+          a(href='/') Home
+          |  | 
+          a(href='/gallery') Gallery
+          |  | 
+          a(href='/about') About
+        p Catcake | An Art Collection
+        p Copyright &copy; 2020 Juliet Lam
+        p Website design by Jonathan Lam

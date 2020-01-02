@@ -1,0 +1,19 @@
+extends layout.pug
+
+block content
+  div.jumbotron.lander
+    div.container
+      div.lander-img
+        img(data-img='/art/caaake.png' title='I\'m watching you')
+      div.lander-text
+        h1.lander-title Catcake
+        h3 Juliet Lam
+        img.lander-text-img(data-img='/art/caaake.png' title='I\'m watching you')
+        hr
+        p
+          a(href='/gallery') Gallery
+          |  | 
+          a(href='/about') About
+
+  each idatum in idata
+    a.jumbotron(data-bgimg=`/art/${idatum.filename}` href=`/peruse/${idatum.perma}`)

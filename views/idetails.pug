@@ -1,0 +1,18 @@
+extends layout.pug
+
+block content
+  a.jumbotron.jumbotron-fit(href=`/art/${idatum.filename}` target='_blank' title=`${idatum.title}. Click to open in new tab.`)
+    div.bgimg.bgimg-fit(data-bgimg=`/art/${idatum.filename}`)
+  div.container
+    h1= idatum.title
+    h3= idatum.desc
+    p= idatum.long_desc
+    h3 Tags
+    div
+      each tag in idatum.tags
+        div #{tag}
+    p Return 
+      a(href='/') home
+      | . Survey the 
+      a(href='/gallery') gallery
+      | .
