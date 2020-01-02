@@ -1,7 +1,7 @@
 doctype 5
 html(lang='en')
   head
-    title Catcake | #{title}
+    title catcake | #{title}
 
     // default -- mobile
     link(rel='stylesheet' href='/css/mobile.css')
@@ -10,8 +10,8 @@ html(lang='en')
     // ...
 
     // different aspect ratios
-    link(rel='stylesheet' media='screen and (min-aspect-ratio:3/4) and (max-aspect-ratio:4/3)' href='/css/squat.css')
-    link(rel='stylesheet' media='screen and (min-aspect-ratio:4/3)' href='/css/wide.css')
+    //link(rel='stylesheet' media='screen and (min-aspect-ratio:3/4) and (max-aspect-ratio:4/3)' href='/css/squat.css')
+    //link(rel='stylesheet' media='screen and ((min-aspect-ratio:4/3) or (min-width:600px))' href='/css/wide.css')
 
     link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400i,400,700&display=swap')
 
@@ -20,16 +20,19 @@ html(lang='en')
   body
     nav.nav-bar
       div.nav-close.ui-interact(title='Toggle menu')
-        div.bgtext
-      a.jumbotron.nav-item(href='/')
+        div.bgtext.bg-greyish
+      a.nav-item.no-underline.ui-interact(href='/')
         h1.bgtext Home
-        div.bgimg.bgfill.bglight(style=`background-image:url(/art/cover.png)`)
-      a.jumbotron.nav-item(href='/gallery')
+        div.bg-light
+        div.bgimg.bgfill(data-bgimg='/art/iphone_case.png')
+      a.nav-item.no-underline.ui-interact(href='/gallery')
         h1.bgtext Gallery
-        div.bgimg.bgfill.bglight(style=`background-image:url(/art/piano_cat.png)`)
-      a.jumbotron.nav-item(href='/about')
+        div.bg-light
+        div.bgimg.bgfill(data-bgimg='/art/piano_cat.png')
+      a.nav-item.no-underline.ui-interact(href='/about')
         h1.bgtext About
-        div.bgimg.bgfill.bglight(style=`background-image:url(/art/jane_by_mom.png)`)
+        div.bg-light
+        div.bgimg.bgfill(data-bgimg='/art/jane_by_mom.png')
     block content
     div.footer
       div.container
@@ -39,6 +42,6 @@ html(lang='en')
           a(href='/gallery') Gallery
           |  | 
           a(href='/about') About
-        p Catcake | An Art Collection
+        p catcake | An Art Collection
         p Copyright &copy; 2020 Juliet Lam
         p Website design by Jonathan Lam

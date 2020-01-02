@@ -1,7 +1,7 @@
 const nav_bar_nav = document.querySelector('.nav-bar');
 const nav_close_button = document.querySelector('.nav-close');
 const search_bar_div = document.querySelector('.search-bar');
-const search_bar_close_button = document.querySelector('.search-bar-close');
+const search_close_button = document.querySelector('.search-close');
 const gallery_div = document.querySelector('.gallery');
 
 let search_bar_open = nav_bar_open = false;
@@ -14,15 +14,13 @@ nav_close_button.addEventListener('click', () => {
   nav_bar_nav.classList.toggle('open');
   if((nav_bar_open = !nav_bar_open) && search_bar_open) {
     search_bar_div.classList.remove('open');
-    // gallery_div.classList.remove('search-bar-open');
     search_bar_open = false;
   }
 });
 
 if(gallery_div)
-  search_bar_close_button.addEventListener('click', () => {
+  search_close_button.addEventListener('click', () => {
     search_bar_div.classList.toggle('open');
-    // gallery_div.classList.toggle('search-bar-open');
     if((search_bar_open = !search_bar_open) && nav_bar_open) {
       nav_bar_nav.classList.remove('open');
       nav_bar_open = false;

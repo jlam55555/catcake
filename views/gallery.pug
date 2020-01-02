@@ -3,38 +3,26 @@ extends layout.pug
 block content
   script(src='/js/gallery.js' defer)
   div.search-bar
-    div.search-bar-close.ui-interact(title='Toggle search options')
-      div.bgtext
+    div.search-close.ui-interact(title='Toggle search options')
+      div.bgtext.bg-greyish
     div.search-query-container.container
       h3 Filter by keyword search
       input.search-query.ui-interact(type='text' placeholder='keyword search')
     div.search-tag-container.container
       h3 Filter by tags
-      p This
-      p is a
-      p work in
-      p progress
+      p This is a work in progress.
     div.search-sort-container.container
       h3 Sort art by
       div.search-sort
-        label.ui-interact
+        label.ui-interact.bgtext
           input.radio-hidden(type='radio' name='radio' value='no' checked)
-          div.custom-radio
-            p new
-            p &darr;
-            p old
-        label.ui-interact
+          div.custom-radio new&#x279d;old
+        label.ui-interact.bgtext
           input.radio-hidden(type='radio' name='radio' value='on')
-          div.custom-radio
-            p old
-            p &darr;
-            p new
-        label.ui-interact
+          div.custom-radio old&#x279d;new
+        label.ui-interact.bgtext
           input.radio-hidden(type='radio' name='radio' value='az')
-          div.custom-radio
-            p A
-            p &darr;
-            p Z
+          div.custom-radio A&#x279d;Z
     div.search-update-container.container
       button.search-update.ui-interact Update search
 
