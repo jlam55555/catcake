@@ -21,7 +21,8 @@
   align-self: flex-end;
 }
 .lander-img > img {
-  max-width: calc(100% - 5rem);
+  /*max-width: calc(100% - 5rem);*/
+  width: 100%;
 }
 .lander-text {
   flex: 0 1 0;
