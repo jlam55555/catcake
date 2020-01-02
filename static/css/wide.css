@@ -22,6 +22,7 @@
 }
 .lander-img > img {
   /*max-width: calc(100% - 5rem);*/
+  width: 490px;
   max-width: 100%;
   height: auto !important;
 }
