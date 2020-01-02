@@ -16,13 +16,11 @@
 
 .lander-img {
   flex: 1 0 0;
-  display: flex;
-  flex-direction: row;
+  display: block;
   align-self: flex-end;
 }
 .lander-img > img {
   /*max-width: calc(100% - 5rem);*/
-  width: 490px;
   max-width: 100%;
   height: auto !important;
 }
