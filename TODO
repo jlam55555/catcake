@@ -1,7 +1,3 @@
-fix horizontal orientation on mobile
-- e.g., menus are too tall
-- e.g., face squished on landing area
 implement tags
 make idetails more pretty
 - implement next/prev
-lazy-load images

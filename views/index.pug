@@ -14,6 +14,9 @@ block content
           a(href='/gallery') Gallery
           |  | 
           a(href='/about') About
-
+  div.jumbotron.lander-hint
+    h3 hi there! navigation bar is up top
+    h3 scroll down to see recent works
+    h1 &#x2304;&#x2304;
   each idatum in idata
     a.jumbotron(data-bgimg=`/art/${idatum.filename}` href=`/peruse/${idatum.perma}`)

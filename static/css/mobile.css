@@ -49,11 +49,13 @@ a:not(.jumbotron):not(.no-underline) {
 h1, h2, h3, h4, h5, h6, p, div {
   margin: 0;
   line-height: 1.5;
+  font-weight: normal;
 }
 hr {
   width: 15rem;
-  margin: 1em 0;
-  height: 0.25rem;
+  margin: 1rem 0;
+  height: 0.0625em;
+  min-height: 1px;
   background-color: black;
   border: none;
 }
@@ -112,15 +114,6 @@ hr {
   z-index: -1;
   background-color: rgba(255, 255, 255, 0.7);
 }
-.bg-greyish {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-color: #bdf;
-}
 .container {
   width: 100%;
   max-width: 75rem;
@@ -147,6 +140,7 @@ hr {
   
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 2px 1px #eee;
 }
 .nav-bar.open, .search-bar.open {
   right: 0;
@@ -159,6 +153,8 @@ hr {
   width: 3rem;
   height: 3rem;
   z-index: 11;
+  background-color: white;
+  box-shadow: 0 0 2px 1px #eee;
 }
 .nav-bar.open>.nav-close, .search-bar.open>.search-close {
   left: auto;
@@ -179,9 +175,6 @@ hr {
   height: calc(100vh / 3);
   position: relative;
 }
-.nav-bar>.nav-item>h1 {
-  font-weight: normal !important;
-}
 .nav-bar>.nav-item>.bgfill {
   z-index: -2;
 }
@@ -199,7 +192,6 @@ hr {
   content: '\2699'; /* trigram for fire */
 }
 .search-bar h3 {
-  font-weight: normal;
   margin-bottom: 0.5rem;
 }
 .search-bar>.container {
@@ -240,16 +232,12 @@ hr {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.gallery-art {
-  height: 30vh;
-  width: 50%;
-}
 .footer {
   text-align: right;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
   position: relative;
-  height: 100vh;
+  height: 15rem;
+  max-height: 100vh;
+  min-height: 20vh;
 }
 .lander {
   height: 100vh;
@@ -279,9 +267,44 @@ hr {
   max-width: 15rem;
   margin: 1rem 0;
 }
+.lander-hint {
+  height: 25vh;
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #888;
+}
 
-/* orientation: landscape */
-@media only screen and (orientation: landscape) {
+/* for larger (width) screens, but no guarantee on height */
+@media only screen and (orientation:landscape),
+       only screen and (min-width:800px) {
+  /* landing area */
+  .lander>.container {
+    display: flex;
+    flex-direction: row;
+  }
+  .lander-img {
+    display: block;
+    flex: 1 0 0;
+    align-self: flex-end;
+  }
+  .lander-img>img {
+    max-width: 100%;
+    height: auto !important;
+  }
+  .lander-text {
+    flex: 0 1 15rem;
+  }
+  .lander-text>hr {
+    display: block;
+  }
+  .lander-text-img {
+    display: none;
+  }
+  
   /* ui elements: search and nav bars */
   .nav-bar {
     flex-direction: row;
@@ -307,6 +330,45 @@ hr {
   .search-bar>.search-sort-container {
     order: 4;
   }
-  
-  /* specific elements (e.g., gallery, landing area) */
 }
+
+/* make the menus smaller if screen is large enough (in both dimensions) */
+/* basically media query for desktops -- can enable transitions too */
+@media only screen and (min-width:800px) and (min-height:360px){
+  /* ui elements */
+  .nav-bar, .search-bar {
+    width: 500px;
+    height: 300px;
+    right: calc(3rem - 500px);
+    top: calc(3rem - 300px);
+  }
+  .search-bar {
+    top: calc(6rem - 300px);
+  }
+  .search-bar>.container {
+    flex: 0 0 calc(300px - 6rem);
+    height: calc(300px - 6rem);
+  }
+  .search-bar>.search-query-container,.search-bar>.search-update-container {
+    flex: 0 0 6rem;
+    height: 6rem;
+  }
+  
+  /* enabling transitions */
+}
+
+/* gallery breakpoints */
+.gallery-art {
+  height: 50vh;
+  width: 50%;
+}
+/* widths */
+@media only screen and (min-width:640px) {.gallery-art {width:calc(100%/3);}}
+@media only screen and (min-width:800px) {.gallery-art {width:25%;}}
+@media only screen and (min-width:1024px) {.gallery-art {width:20%;}}
+@media only screen and (min-width:1600px) {.gallery-art {width:calc(100%/6);}}
+@media only screen and (min-width:1960px) {.gallery-art {width:12.5%;}}
+/* heights */
+@media only screen and (min-height:600px) {.gallery-art {height:calc(100vh/3);}}
+@media only screen and (min-height:768px) {.gallery-art {height:25vh;}}
+@media only screen and (min-height:1080px) {.gallery-art {height:20vh;}}

@@ -3,24 +3,16 @@ html(lang='en')
   head
     title catcake | #{title}
 
-    // default -- mobile
+    // css -- mobile-first (but includes other styles too)
     link(rel='stylesheet' href='/css/mobile.css')
-
-    // desktop -- for large screens
-    // ...
-
-    // different aspect ratios
-    //link(rel='stylesheet' media='screen and (min-aspect-ratio:3/4) and (max-aspect-ratio:4/3)' href='/css/squat.css')
-    //link(rel='stylesheet' media='screen and ((min-aspect-ratio:4/3) or (min-width:600px))' href='/css/wide.css')
-
-    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400i,400,700&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400i,400&display=swap')
 
     script(src='/js/main.js' defer)
     meta(name='viewport' content='width=device-width,initial-scale=1.0')
   body
     nav.nav-bar
       div.nav-close.ui-interact(title='Toggle menu')
-        div.bgtext.bg-greyish
+        div.bgtext
       a.nav-item.no-underline.ui-interact(href='/')
         h1.bgtext Home
         div.bg-light
@@ -44,4 +36,7 @@ html(lang='en')
           a(href='/about') About
         p catcake | An Art Collection
         p Copyright &copy; 2020 Juliet Lam
-        p Website design by Jonathan Lam
+        p
+          a(href='https://www.github.com/jlam55555/catcake' target='_blank') Website design by Jonathan Lam
+        br
+        small (the menu is in the northeast)
